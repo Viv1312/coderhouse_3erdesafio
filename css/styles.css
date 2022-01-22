@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&family=News+Cycle&family=PT+Sans+Narrow&display=swap');
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+header {
+  margin: 0 !important;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(179, 168, 166);
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'News Cycle', sans-serif;
+}
+
+header .logo {
+  width: 300px;
+  height: 99%;
+  text-align: center;
+}
+
+header .logo h1 {
+  color: #e7cdc8;
+}
+
+header .logo h1:hover {
+  cursor: pointer;
+}
+
+header .navbar {
+  height: 99%;
+  display: flex;
+}
+
+header .navbar ul {
+  display: flex;
+  margin: auto;
+}
+
+header .navbar ul li {
+  list-style-type: none;
+  width: auto;
+  transition: all 1000ms;
+}
+header .navbar ul li a {
+  text-decoration: none;
+  margin: 20px;
+  color: #494645;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+header .navbar ul li a:hover {
+  font-style: oblique;
+  font-weight: 600;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+
+  padding: 10px;
+}
+
+.grid-item img{
+  width: 100%;
+  height: 300px;
+
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.grid-item:hover {
+  filter: opacity(0.9);
+  transform: scale(1.04);
+}
+
+.grid-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-auto-rows: minmax(300px, auto);
+  padding: 10px !important;
+  gap: 20px;
+  grid-auto-flow: dense;
+
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.options{
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.option{
+    height: 100%;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+
+.option a{
+    color: #575555;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'News Cycle', sans-serif;
+}
+
+.option:hover{
+    background: rgb(245, 245, 222);
+    
+}
+
+.description{
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+}
+  .description h1{
+   text-align: center;
+ }
+ 
+
+.description button{
+  margin:auto;
+  padding: 10px;
+  width: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10px;
+  border: 1px solid rgb(179, 168, 166);
+  cursor: pointer;
+  box-shadow: rgb(236, 229, 229);
+  border-radius: none;
+  display: inline-block;
+  background-color: blanchedalmond;
+}
+
+.description button:hover{
+  background: rgb(179, 168, 166);
+  color: blanchedalmond;
+}
+
+.contenedor{
+  background-color: rgba(247, 238, 238, 0.986);
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: row;
+  font-family: 'News Cycle', sans-serif;
+}
+
+
+.contenedor .image{
+  width: 50%;
+}
+
+.contenedor .image img{
+  height: 100%;
+  width: 100%;
+}
+
+.contenedor .description{
+  width: 50%;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+}
+
+
+footer{
+  background-color:#858281;
+  font-weight: lighter;
+  font-style: italic;
+  position: fixed;
+  bottom: 0;
+  color: blanchedalmond;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-style: italic;
+  line-height: 30px;
+  font-family: 'News Cycle', sans-serif;
+}
+
+@media (max-width: 667px) {
+  .contenedor{
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  .contenedor .image{
+    width: 100%;
+    height: 300px;
+  }
+
+  .contenedor .description{
+    width: 99%;
+    height: 100%;
+    padding-left: 0px;
+  }
+
+  .contenedor .description span{
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .wide {
+    grid-column: span 3;
+  }
+
+  .tall {
+    grid-row: span 1;
+  }
+
+  .grid-container {
+    width: 100%;
+    padding: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .grid-container{
+    width: 100%;
+
+    padding: 0px;
+  }
+
+  .grid-item{
+    margin: auto;
+    width: 90%;
+  }
+}
+
+
